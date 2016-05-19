@@ -1,0 +1,13 @@
+UPDATE `dayton`
+JOIN min_max
+ON dayton.customer_id = min_max.customer_id
+OR dayton.carrier_id = min_max.carrier_id
+SET status =
+
+CASE WHEN dayton.weight BETWEEN min_max.min_weight AND min_max.max_weight AND dayton.gross_amount BETWEEN min_max.min_price AND min_max.max_price THEN 2
+
+CASE WHEN dayton.weight NOT BETWEEN min_max.min_weight AND min_max.max_weight OR dayton.gross_amount NOT BETWEEN min_max.min_price AND min_max.max_price THEN 1
+		  
+ELSE status
+END
+

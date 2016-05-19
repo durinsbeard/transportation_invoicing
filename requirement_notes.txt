@@ -1,0 +1,6 @@
+Setting rules for just customer or just a carrier? 
+Setting rules when a customer uses a specicfic carrier?
+How do I view existing rules?
+Set up rules for Newstream and Dayton and execute the report.
+Keep values after the report has been run.
+Create UI that better handles different ways to create rules.
